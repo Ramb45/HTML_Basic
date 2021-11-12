@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Commentaire 
+Mise en place du doctype soit "!" ou bien "html"-->
+
+<!-- mise en place du commentaire, selection le texte et ctrl/  -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Le titre de la page  -->
+    <title>Cours HTML</title>
+
+    <!-- Icone de l'onglet -->
+    <link rel="shortcut icon" href="html-logo.png" />
+    <style>
+        H1 {
+            color: rgb(231, 19, 54);
+        }
+        
+        H2 {
+            color: blue;
+        }
+        
+        H3 {
+            color: greenyellow;
+            background-color: black;
+        }
+    </style>
+    <!-- commentaire -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+</head>
+
+<body>
+    <header>
+        <!-- tag  header est une introduction dans le body.            
+            H1 une par page html  -->
+        <h1>Texte - Titre H1</h1>
+
+        <!-- mettre à la ligne br         -->
+        <p>
+            texte basique <br />
+            <em>em pour mettre en italique</em>,
+            <strong>strong pour mettre en gras</strong>
+            <span>L'élement en span ne revient pas à la ligne</span>.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cumque ratione veniam officiis nulla a debitis at facilis sed dignissimos.
+        </p>
+    </header>
+
+    <!-- commentaire -->
+    <section>
+        <div>
+            <h2>Photo - Titre H2</h2>
+            <img src="./img-1.jpg" alt="image-arbre" height="200" />
+        </div>
+        <hr />
+        <div>
+            <h3>Liste - Titre H3</h3>
+            <ul>
+                <!-- dupliuer les éléments MAJ+ALT+Fleche du bas commentaire -->
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+            </ul>
+            <ol>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+            </ol>
+        </div>
+        <hr />
+        <div>
+            <h4>Tableaux - Titre H4</h4>
+            <table border="4" cellpadding="10" cellspacing="4" style="text-align: center">
+                <!-- legende  -->
+                <caption>
+                    Population d'Europe
+                </caption>
+                <!-- entete du tableau -->
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Populations</th>
+                        <th>Col 3</th>
+                    </tr>
+                </thead>
+                <!-- corps du tableau  -->
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Row 1 Cell 1</td>
+                        <td>Row 1 Cell 2</td>
+                        <td>Row 1 Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Cell 2</td>
+                        <td>Row 2 Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Row 3 Cell 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h5><span>&#9814;</span> Liens - Titre H5</h5>
+            <!-- mise en place d'un lien vers un site dans un second onglet -->
+            <a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheatsheet</a
+        >
+        <br />
+        <!-- liens vers des icones -->
+        <a
+          href="https://www.toptal.com/designers/htmlarrows/symbols/"
+          target="_blank"
+          >Icones natifs en HTML</a
+        >
+      </div>
+
+      <div>
+        <!-- intégration d'une vidéo sur une page html -->
+        <h6><i class="fas fa-video"></i> Vidéo - Titre H6</h6>
+        <video src="video.mp4" height="150" autoplay muted></video>
+      </div>
+    </section>
+    <br />
+
+    <!-- balise iframe 
+            intégration d'un lien à l'intérieur de notre page web  
+           -->
+    <h6><i class="YOU TUBE"></i>VIDEO - YOU TUBE</h6>
+    <iframe
+      width="280"
+      height="158"
+      src="https://www.youtube.com/embed/eXF0epLeCgo"
+      title="YouTube video player"
+      frameborder="3"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!--  autre possibilité pour iframe--><br />
+    &nbsp; &nbsp; &nbsp;
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.2753019038!2d3.8529137152263786!3d43.60080916383544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6ae455ee267db%3A0xb26c05dc216ca71!2sRue%20du%20Fer%20%C3%80%20Cheval%2C%2034070%20Montpellier!5e0!3m2!1sfr!2sfr!4v1622576862015!5m2!1sfr!2sfr"
+      width="280"
+      height="225"
+      style="border: 1"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    <!-- Formulaires en HTML -->
+    <section>
+      <h2>Formulaire</h2>
+      <form action="/action.php" method="post">
+        <label for="name">Nom</label>
+        <input id="name" type="text" placeholder="Entrez votre nom" /><br />
+
+        <label for="number">Entrez votre age</label>
+        <input
+          type="number"
+          id="number-age"
+          value="15"
+          oninput="document.getElementById('range-age').value=this.value"
+        />
+        <input
+          type="range"
+          id="range-age"
+          min="0"
+          max="100"
+          oninput="document.getElementById('number-age').value=this.value"
+        /><br />
+
+        <!-- Input select -->
+        <label for="gender">Genre</label>
+        <select id="gender">
+          <option selected="selected" value="Homme">Homme</option>
+          <option value="Femme">Femme</option></select
+        ><br />
+
+        <!-- Input radio -->
+        <div>
+          <input type="radio" name="type" id="human" checked />
+          <label for="human">Humain</label>
+
+          <input type="radio" name="type" id="dog" />
+          <label for="dog">Chien</label>
+
+          <input type="radio" name="type" id="cat" />
+          <label for="cat">Chat</label>
+        </div>
+
+        <textarea cols="20" rows="5" placeholder="Votre message..."></textarea
+        ><br />
+
+        <!-- Input Checkbox -->
+        <label><input type="checkbox" />Accepter les CGV</label> <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+    <br />
+    <!-- Mail & envoi de fichiers -->
+    <footer>
+      <a href="mailto:fs@gmail.com">Ecrivez-moi !</a>
+            <br />
+            <a href="notice.txt" download="nom-du-fichier">Télécharger la notice</a>
+            <br />
+            <br />
+            <!-- détails -->
+            <details>
+                <br />
+                <summary>Plus d'infos</summary>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, repellendus.
+                    <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum cum aliquid, veritatis, iure magnam alias consequuntur ducimus <br /> mollitia temporibus obcaecati vel consectetur iusto minima explicabo corporis voluptas.
+                    Dolores, similique.
+                </p>
+            </details>
+            </footer>
+</body>
+
+</html>
